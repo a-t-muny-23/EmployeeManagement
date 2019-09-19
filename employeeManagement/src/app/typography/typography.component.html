@@ -1,0 +1,66 @@
+<div *ngIf="em">
+        <div class="main-content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header card-header-danger">
+                                    <h4 class="card-title">UpdateEmployee</h4>
+                                    <p class="card-category">fill in the details below to update an employee</p>
+                                </div>
+                                <div class="card-body">
+                                    <form (ngSubmit)="updateEmployee(em.id)" [formGroup]="employeeForm">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                              <mat-form-field class="example-full-width">
+                                                  <input matInput value="{{em.empID}}" formControlName="empID" required>
+                                                </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                              <mat-form-field class="example-full-width">
+                                                <input matInput value="{{em.firstName}}" type="text" formControlName="firstName" required>
+                                              </mat-form-field>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <mat-form-field class="example-full-width">
+                                                <input matInput value="{{em.middleName}}" type="text" formControlName="middleName">
+                                              </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                              <mat-form-field class="example-full-width">
+                                                <input matInput value="{{em.lastName}}" type="text" formControlName="lastName" required>
+                                              </mat-form-field>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <mat-form-field class="example-full-width">
+                                                <input matInput value="{{em.idNumber}}" type="text" formControlName="idNumber" required>
+                                              </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                              <mat-form-field class="example-full-width">
+                                                <input matInput value="{{em.position}}" type="text" formControlName="position" required>
+                                              </mat-form-field>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <mat-form-field class="example-full-width">
+                                                <input matInput value="{{em.salary}}" type="text" formControlName="salary" required>
+                                              </mat-form-field>
+                                            </div>
+                                        </div>
+                                        <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Employee</button>
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              
+</div>

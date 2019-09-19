@@ -1,0 +1,77 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Employees</h4>
+                      <p class="card-category"> All Employees</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      Em ID
+                                  </th>
+                                  <th>
+                                      First Name
+                                  </th>
+                                  <th>
+                                      Middle Name
+                                  </th>
+                                  <th>
+                                      Last Name
+                                  </th>
+                                  <th>
+                                    ID Number
+                                  </th>
+                                  <th>
+                                      Position
+                                  </th>
+                                  <th>
+                                    Salary
+                                  </th>
+                                  <th>
+                                      Action
+                                    </th>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let e of employees">
+                                      <td>
+                                          {{e.empID}}
+                                      </td>
+                                      <td>
+                                          {{e.firstName}}
+                                      </td>
+                                      <td>
+                                          {{e.middleName}}
+                                      </td>
+                                      <td>
+                                          {{e.lastName}}
+                                      </td>
+                                      <td>
+                                        {{e.idNumber}}
+                                      </td>
+                                      <td>
+                                        {{e.position}}
+                                      </td>
+                                      <td>
+                                        {{e.salary}}
+                                      </td>
+                                      <td>
+                                          <a [routerLink]="['/edit-employee', e.id]" class="btn btn-success btn-sm p-2">Edit</a>
+                                          <button (click)="delete(e.id)" class="btn btn-danger btn-danger btn-sm p-2">
+                                              Delete
+                                          </button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
